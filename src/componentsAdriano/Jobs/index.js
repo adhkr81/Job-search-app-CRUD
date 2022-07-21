@@ -109,7 +109,7 @@ export function Jobs () {
                 )
             })
         }
-        <Link to="/dashboard" className={`m-3 btn btn-primary ${styles.button}`}>VOLTAR</Link>
+        <Link to="/dashboard" className={`m-3 btn btn-primary ${styles.button}`}>BACK</Link>
         </div>
     )
 }

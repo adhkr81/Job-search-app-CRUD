@@ -2,8 +2,13 @@ import styles from "../Create/styles.module.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { Background } from "../../../context/contextdark";
 
 export function Edit() {
+
+  const {color} = useContext(Background)
+
   const { id } = useParams();
   const navigate = useNavigate();
   const [form, setForm] = useState({
@@ -62,11 +67,11 @@ export function Edit() {
 
   return (
     <div
-      className={`col-md-8 col-sm-12 col-lg-8 container mt-5 ${styles.formContainer}`}>
+      className={color === "light" ? `container-fluid mt-4 mb-5 dark` : `container-fluid mt-4 mb-5 dark light `}>
       <form>
         <div className="mb-4">
           <label htmlFor="name-input" className="form-label">
-            <h5>Nome da Empresa: </h5>
+            <h5>Company Name: </h5>
           </label>
           <input
             id={styles.nameInput}
@@ -77,7 +82,7 @@ export function Edit() {
             value={form.name}
           />
           <label htmlFor="office-input" className="form-label">
-            <h5>Cargo: </h5>
+            <h5>Position: </h5>
           </label>
           <input
             id={styles.nameInput}
@@ -88,7 +93,7 @@ export function Edit() {
             value={form.office}
           />
           <label htmlFor="about-input" className="form-label">
-            <h5>Sobre a Vaga: </h5>
+            <h5>About: </h5>
           </label>
           <textarea
             id="about-input"
@@ -104,15 +109,15 @@ export function Edit() {
             onClick={handleSubmit}
             className={`btn btn-primary ${styles.button}`}
           >
-            Salvar
+            Save
           </button>
 
           <Link to="/ad-page" className={`btn btn-primary m-3 ${styles.button}`}>
-            Voltar
+            Back
           </Link>
 
           <button onClick={handleDelete} className="btn btn-danger">
-            Deletar
+            Delete
           </button>
 
         </div>

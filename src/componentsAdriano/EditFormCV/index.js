@@ -87,15 +87,15 @@ export function EditFormCV () {
             </div> */}
 
             <div className="mb-4 container">
-                <div className="mb-4"><h2>Edite Informações Pessoais</h2></div>
-                <label htmlFor="name-input" className="form-label"><h5>Nome completo: </h5></label>
+                <div className="mb-4"><h2>Edit Profile</h2></div>
+                <label htmlFor="name-input" className="form-label"><h5>Name: </h5></label>
                 <input id={styles.nameInput} onChange={handleChange} type="text" name="name"  className="form-control mb-4" value={form.name}/>
 
-                <label htmlFor="about-input" className="form-label"><h5>Sobre mim: </h5></label>
+                <label htmlFor="about-input" className="form-label"><h5>About me: </h5></label>
                 <textarea id="about-input" onChange={handleChange} type="text" name="about" className="form-control mb-4" value={form.about}/>
             </div>
 
-            <div className="mb-4"><h2>Edite Habilidades</h2></div>
+            <div className="mb-4"><h2>Edit Skills</h2></div>
 
 
             <div className="form-check mb-4">
@@ -143,12 +143,12 @@ export function EditFormCV () {
 
             <div className="d-flex flex-column">
                 
-                <label htmlFor="other-input" className="form-label">Outras habilidades relevantes: </label>
+                <label htmlFor="other-input" className="form-label">More details: </label>
                 <input id={styles.otherInput} onChange={handleChange} type="text" name="other" className="form-control mb-4" value={form.other}/> 
             </div>
 
-            <button onClick={handleSubmit} className={`btn btn-primary ${styles.button}`}>ENVIAR</button>
-            <Link to="/dashboard" className={`m-3 btn btn-primary ${styles.button}`}>VOLTAR</Link>
+            <button onClick={handleSubmit} className={`btn btn-primary ${styles.button}`}>SEND</button>
+            <Link to="/dashboard" className={`m-3 btn btn-primary ${styles.button}`}>BACK</Link>
         </form>
     </div>
     )

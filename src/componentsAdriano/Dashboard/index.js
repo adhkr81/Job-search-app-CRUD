@@ -84,8 +84,8 @@ export function Dashboard () {
                                 <div className={color === "light" ? " dark1 card-body" : " light1 card-body"}>
                                 <h5 className="card-title">{current.name}</h5>
                                 <div className="card-text d-flex justify-content-center">
-                                    <div><Link to={`/EditFormCV/${current._id}`}className={`btn btn-primary btn-sm ${styles.button}`} >EDITAR</Link></div>
-                                    <div><Link to={`/Jobs/${current._id}`} className={`btn btn-primary btn-sm ${styles.button}`} >VAGAS</Link></div>
+                                    <div><Link to={`/EditFormCV/${current._id}`}className={`btn btn-primary btn-sm ${styles.button}`} >EDIT</Link></div>
+                                    <div><Link to={`/Jobs/${current._id}`} className={`btn btn-primary btn-sm ${styles.button}`} >JOBS</Link></div>
                                     <div><button onClick={(() => {
                                                     handleDelete(current)
                                               })} to="/formCV" className={`btn btn-primary btn-sm ${styles.buttonDel}`} >DELETE</button></div>

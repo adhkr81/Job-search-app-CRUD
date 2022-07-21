@@ -2,8 +2,16 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
+import { useContext } from "react";
+import { Background } from "../../../context/contextdark";
+
 
 export function AdPage() {
+
+
+  const {color} = useContext(Background)
+
+
   const [data, setData] = useState([
     { name: "", office: "", description: "", candidacies: [] },
   ]);
@@ -31,7 +39,7 @@ export function AdPage() {
   }
 
   return (
-    <div className={`container-fluid mt-5 ${styles.formContainer}`}>
+    <div className={color === "light" ? `container-fluid mt-4 mb-5 dark` : `container-fluid mt-4 mb-5 dark light `}>
       <div className="m-2">
         <h2>DASHBOARD</h2>
       </div>
@@ -39,7 +47,7 @@ export function AdPage() {
       <div className="row">
         <div className="col-3 mb-5">
           <Link to="/create" className={`btn btn-primary ${styles.button}`}>
-            Anuncie
+            Create Job
           </Link>
         </div>
         <div className="col-3 mb-5"></div>
@@ -48,7 +56,7 @@ export function AdPage() {
         {data.map((current) => {
           return (
 <>
-            <div className={`container col-11 mb-5 ${styles.formCardJobs}`} key={current.name}>
+            <div className={color === "light" ? `container mb-5 dark1` : `container mb-5 light1`} key={current.name}>
             <div className="row mb-3 p-4 align-items-center">
                 <div className="col-3"><strong>{current.name}</strong></div>
                 <div className="col-7">{current.office}</div>

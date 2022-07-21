@@ -3,9 +3,15 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./styles.module.css"
+import { useContext } from "react";
+import { Background } from "../../../context/contextdark";
 
 
 export function Candidates() {
+
+  
+  const {color} = useContext(Background)
+
   const [data, setData] = useState([]);
   const { id } = useParams();
   useEffect(() => {
@@ -22,19 +28,19 @@ export function Candidates() {
     AllCandidates();
   }, []);
   return (
-    <div className={`col-md-8 col-sm-12 col-lg-8 container mt-5 mb-5 ${styles.formContainer}`}>
-      <div className="mb-5"><h3>Lista de Candidatos</h3></div>
+    <div className={color === "light" ? `container-fluid mt-4 mb-5 dark` : `container-fluid mt-4 mb-5 dark light `}>
+      <div className="mb-5"><h3>Candidates List</h3></div>
       {data.map((currentElement) => {
         return (
           <div className="mb-4">
-            <h5>Nome: {currentElement.name}</h5>
+            <h5>Name: {currentElement.name}</h5>
             <p>{currentElement.about} </p>
             <p>{currentElement.other}</p>
           </div>
         );
       })}
       <Link to="/ad-page" className={`btn btn-warning mt-5 ${styles.button2}`}>
-        VOLTAR
+        Back
       </Link>
     </div>
   );

@@ -2,8 +2,13 @@ import styles from "./styles.module.css";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
+import { useContext } from "react";
+import { Background } from "../../../context/contextdark";
 
 export function Create() {
+
+  const {color} = useContext(Background)
+
   const navigate = useNavigate();
   const [form, setForm] = useState({
     name: "",
@@ -27,11 +32,11 @@ export function Create() {
 
   return (
     <div
-      className={`col-md-8 col-sm-12 col-lg-8 container mt-5 ${styles.formContainer}`}>
+      className={color === "light" ? `container-fluid mt-4 mb-5 dark` : `container-fluid mt-4 mb-5 dark light `}>
       <form>
         <div className="mb-4">
           <label htmlFor="name-input" className="form-label">
-            <h5>Nome da Empresa: </h5>
+            <h5>Company Name: </h5>
           </label>
           <input
             id={styles.nameInput}
@@ -42,7 +47,7 @@ export function Create() {
             value={form.name}
           />
           <label htmlFor="office-input" className="form-label">
-            <h5>Cargo: </h5>
+            <h5>Position: </h5>
           </label>
           <input
             id={styles.nameInput}
@@ -53,7 +58,7 @@ export function Create() {
             value={form.office}
           />
           <label htmlFor="about-input" className="form-label">
-            <h5>Sobre a Vaga: </h5>
+            <h5>About: </h5>
           </label>
           <textarea
             id="about-input"
@@ -69,10 +74,10 @@ export function Create() {
             onClick={handleSubmit}
             className={`btn btn-primary ${styles.button}`}
           >
-            Salvar
+            Save
           </button>
           <Link to="/ad-page" className="btn btn-warning m-3">
-            Voltar
+            Back
           </Link>
         </div>
       </form>

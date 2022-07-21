@@ -27,12 +27,12 @@ export function Home() {
         <div className="col-3"></div>
         <div className="col-3 d-flex justify-content-center">
           <Link to="./dashboard" className={`btn btn-primary ${styles.button}`}>
-            CANDIDATE
+            APLLY FOR JOBS
           </Link>
         </div>
         <div className="col-3 d-flex justify-content-center">
           <Link to="./ad-page" className={`btn btn-primary ${styles.button}`}>
-            ANUNCIE
+            CREATE JOBS
           </Link>
         </div>
         <div className="col-3"></div>
