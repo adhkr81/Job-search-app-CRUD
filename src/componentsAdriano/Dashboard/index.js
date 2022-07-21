@@ -53,7 +53,7 @@ export function Dashboard () {
 
         async function FetchDelete() {
             try { 
-                const response = await axios.delete(`https://ironrest.herokuapp.com/linkedinadriano/${id}`)
+                await axios.delete(`https://ironrest.herokuapp.com/linkedinadriano/${id}`)
                 console.log("apaga")
 
             } catch (err) {
@@ -77,7 +77,7 @@ export function Dashboard () {
 
                 {form.map((current) => {
                     
-                    return  <div className={color === "light" ? `card-group col-sm-6 col-md-5 m-2 formCarddark` : `card-group col-sm-6 col-md-5 m-2 formCardlight`} key={current._id}>
+                    return  <div className={color === "light" ? `card-group col-sm-6 col-md-5 m-2 formCarddark` : `card-group col-sm-6 col-md-5 m-2 formCardlight`} key={current.about}>
                             
                             <div className="card">
                                 {/* <img src="..." className="card-img-top" alt="..."/> */}
