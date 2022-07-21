@@ -15,9 +15,7 @@ export function AdPage() {
   const [data, setData] = useState([
     { name: "", office: "", description: "", candidacies: [] },
   ]);
-  const [form, setForm] = useState([
-    { name: "", office: "", description: "", candidacies: [] },
-  ]);
+
 
   useEffect(() => {
     async function Vancacys() {
@@ -33,10 +31,6 @@ export function AdPage() {
     Vancacys();
   }, []);
 
-  function handleChange(e) {
-    e.preventDefault();
-    setForm({ ...form, [e.target.name]: e.target.value });
-  }
 
   return (
     <div className={color === "light" ? `container-fluid mt-4 mb-5 dark` : `container-fluid mt-4 mb-5 dark light `}>

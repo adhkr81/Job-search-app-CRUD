@@ -26,7 +26,7 @@ export function Candidates() {
       }
     }
     AllCandidates();
-  }, []);
+  }, [id]);
   return (
     <div className={color === "light" ? `container-fluid mt-4 mb-5 dark` : `container-fluid mt-4 mb-5 dark light `}>
       <div className="mb-5"><h3>Candidates List</h3></div>

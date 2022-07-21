@@ -45,7 +45,7 @@ export function EditFormCV () {
         } 
         FetchCV()
 
-    }, [])
+    }, [idCV])
 
 
     function handleChange(e) {
