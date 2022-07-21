@@ -1,0 +1,44 @@
+.dark {
+    background-color: #535353;
+    padding: 100px;
+    box-shadow: .5px 10px 15px rgba(0, 0, 0, .2);
+    color : white;
+        /* border-radius: 20px; */
+}
+
+.light {
+    background-color: #fff;
+    padding: 100px;
+    box-shadow: .5px 10px 15px rgba(0, 0, 0, .2);
+        /* border-radius: 20px; */
+}
+
+.formCardlight {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: .5px 10px 15px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+}
+
+.formCarddark {
+    background-color: #555555;
+    padding: 30px;
+    box-shadow: .5px 10px 15px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+}
+
+.dark1 {
+    background-color: #535353;
+    box-shadow: .5px 10px 15px rgba(0, 0, 0, .2);
+    color : white;
+    border: 0
+        /* border-radius: 20px; */
+}
+
+.light1 {
+    background-color: #fff;
+    color: black;
+    box-shadow: .5px 10px 15px rgba(0, 0, 0, .2);
+    border: 0
+        /* border-radius: 20px; */
+}

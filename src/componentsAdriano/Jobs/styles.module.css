@@ -1,0 +1,70 @@
+body {
+    background-color: #f8f8f8!important;
+}
+
+h2 {
+    font-weight: 700 !important;
+}
+
+.formContainer {
+    background-color: #fff;
+    padding: 100px;
+    box-shadow: .5px 10px 15px rgba(0, 0, 0, .2);
+        /* border-radius: 20px; */
+}
+
+.formContainer.dark {
+    background-color: #555555;
+    padding: 100px;
+    box-shadow: .5px 10px 15px rgba(0, 0, 0, .2);
+        /* border-radius: 20px; */
+}
+
+.formCard {
+    background-color: #fff;
+    padding: 100px;
+    box-shadow: .5px 10px 15px rgba(0, 0, 0, .2);
+    border-radius: 20px;
+}
+
+.formCardJobs {
+    background-color: #f8f8f8;
+    height: 160px;
+    box-shadow: .5px 10px 15px rgba(0, 0, 0, .2);
+    border-radius: 1px;
+}
+
+#nameInput,
+#otherInput {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0
+}
+
+/* .button {
+    background-color: palevioletred !important;
+    border-color: palevioletred !important;
+} */
+
+.button:hover {
+    background-color: #3d36bd !important;
+    border-color:#3d36bd !important;
+    transition: .5s
+}
+
+.button {
+    background-color: #6c63ff !important;
+    border-color:#6c63ff !important;
+    border-radius: 10px !important;
+    box-shadow: .5px 10px 15px rgba(0, 0, 0, .2) !important;
+    margin:10px
+}
+
+.buttonDel {
+    background-color: #cc1d3a !important;
+    border-color:#cc1d3a !important;
+    border-radius: 10px !important;
+    box-shadow: .5px 10px 15px rgba(0, 0, 0, .2) !important;
+    margin:10px;
+    color: #fff
+}
