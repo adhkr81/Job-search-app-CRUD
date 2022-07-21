@@ -48,9 +48,10 @@ export function AdPage() {
         <div className="col-3 mb-5"></div>
 
         {data.map((current) => {
+
           return (
-<>            
-            <div className={color === "light" ? `container mb-5 dark1` : `container mb-5 light1`} key={current._id}>
+          
+            <div className={color === "light" ? `container mb-5 dark1` : `container mb-5 light1`} key={`adPage${current._id}`}>
             <div className="row mb-3 p-4 align-items-center">
                 <div className="col-3"><strong>{current.name}</strong></div>
                 <div className="col-7">{current.office}</div>
@@ -68,12 +69,6 @@ export function AdPage() {
 
         </div>
 
-
-
-
-
-
-            </>
 
           );
         })}
