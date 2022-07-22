@@ -71,7 +71,7 @@ export function Dashboard () {
 
             <div className="row justify-content-center">
                 
-                <div className="col-3"><Link to="/formCV" className={`btn btn-primary ${styles.button}`} >CRIE PERFIL</Link></div>
+                <div className="col-3"><Link to="/formCV" className={`btn btn-primary ${styles.button}`} >CREATE PROFILE</Link></div>
                 <div className="col-3"></div>
                 <div className="col-3"></div>
 

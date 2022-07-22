@@ -1,10 +1,10 @@
 import {createContext, useState} from "react"
 
 
-const Background = createContext("light")
+const Background = createContext("dark")
 
 function BackgroundComponent (props) {
-    const [color, setColor] = useState("light")
+    const [color, setColor] = useState("dark")
 
     
     const toggleBackground = () => {
