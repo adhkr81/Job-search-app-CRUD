@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { Background } from "../../context/contextdark";
 import styles from "./styles.module.css";
 import cover from "../../images/cover2.png";
+import logo from "../../images/joblogo.jpg"
 
 export function Home() {
 
@@ -11,10 +12,32 @@ export function Home() {
 
   // <div className={`container-fluid mt-4 `}>
   return (
-    <div className={color === "light" ? `container-fluid mt-4 dark` : `container-fluid mt-4 light`}>
+
+
+  <div>
+    <nav class={color === "light" ? "navbar navbar-light bg-dark dark2" : "navbar navbar-light bg-light light2"}>
+        <a class="navbar-brand" href="#">
+            <img src={logo} width="150" height="40" class="d-inline-block align-top mx-3" alt=""/>
+        </a>
+
+        
+
+        <div>
+        <button onClick={toggleBackground} className={`btn btn-dark btn m-3 ${styles.button.dark}`}>{color === "light" ? `Light` : `Dark`}</button>
+        </div>
+    </nav>
+
+
+
+
+
+    <div className={color === "light" ? `container-fluid mt-0 dark` : `container-fluid mt-0 light`}>
+
+
+
 
     <div className="d-flex justify-content-end">
-      <div><button onClick={toggleBackground} className={`btn btn-dark btn-sm m-3 ${styles.button.dark}`}>{color === "light" ? `Light` : `Dark`}</button></div>
+      <div></div>
     </div>
 
       <div className="row">
@@ -38,5 +61,6 @@ export function Home() {
         <div className="col-3"></div>
       </div>
     </div>
+  </div>
   );
 }

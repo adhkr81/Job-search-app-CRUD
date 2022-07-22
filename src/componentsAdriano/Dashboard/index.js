@@ -66,7 +66,7 @@ export function Dashboard () {
 
 
     return (
-        <div className={color === "light" ? `container-fluid mt-4 dark` : `container-fluid mt-4 light`}>
+        <div className={color === "light" ? `container-fluid mt-4 dark dark1` : `container-fluid mt-4 light light1`}>
             <div><h2>DASHBOARD</h2></div>
 
             <div className="row justify-content-center">
