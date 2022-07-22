@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { Background } from "../../context/contextdark";
 import styles from "./styles.module.css";
 import cover from "../../images/cover2.png";
-import logo from "../../images/joblogo.jpg"
+import logo from "../../images/joblogo.png"
 
 export function Home() {
 
