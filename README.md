@@ -15,8 +15,9 @@ The Frontend was developed with React js, and the Backend functionality was code
 
 
 
-![jobsApp](https://user-images.githubusercontent.com/104802360/180127269-5c8dcc67-19c5-45ae-a1c6-49b27a91a37f.png)
 
 
+
+![jobsApp](https://user-images.githubusercontent.com/104802360/180354038-07006093-f9ab-4ac6-8c56-aec4d63f6abb.png)
 
 
