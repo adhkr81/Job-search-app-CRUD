@@ -15,9 +15,9 @@ export function Home() {
 
 
   <div>
-    <nav class={color === "light" ? "navbar navbar-light bg-dark dark2" : "navbar navbar-light bg-light light2"}>
-        <a class="navbar-brand" href="#">
-            <img src={logo} width="150" height="40" class="d-inline-block align-top mx-3" alt=""/>
+    <nav className={color === "light" ? "navbar navbar-light bg-dark dark2" : "navbar navbar-light bg-light light2"}>
+        <a className="navbar-brand" href="#">
+            <img src={logo} width="150" height="40" className="d-inline-block align-top mx-3" alt=""/>
         </a>
 
         
